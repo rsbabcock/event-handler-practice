@@ -29,13 +29,13 @@ const mindSection = document.querySelector("#mindreading")
 const xRaySection = document.querySelector("#xray")
 
 document.querySelector("#activate-flight").addEventListener("click", () => toggleClass(flightSection))
-document.querySelector("#activate-mindreading").addEventListener("click", () => toggleClass(mindSection))
-document.querySelector("#activate-xray").addEventListener("click", () => toggleClass(xRaySection))
 
 /*
-    Now write two more event handlers that activate the other two powers
-    when the corresponding buttons are clicked.
+Now write two more event handlers that activate the other two powers
+when the corresponding buttons are clicked.
 */
+document.querySelector("#activate-mindreading").addEventListener("click", () => toggleClass(mindSection))
+document.querySelector("#activate-xray").addEventListener("click", () => toggleClass(xRaySection))
 
 
 /*
@@ -43,3 +43,14 @@ document.querySelector("#activate-xray").addEventListener("click", () => toggleC
     when the corresponding buttons are clicked. You will need to use the
     `document.querySelectorAll()` method for these.
 */
+
+// const sections = () => {
+    
+//     sect.forEach(currentSect => {
+        
+//     })
+// }
+const sect = document.querySelectorAll('.power')
+
+
+document.querySelector('#activate-all').addEventListener("click", () => toggleClass(sect))
