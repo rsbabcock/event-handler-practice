@@ -50,7 +50,39 @@ document.querySelector("#activate-xray").addEventListener("click", () => toggleC
         
 //     })
 // }
-const sect = document.querySelectorAll('.power')
+const sect = document.querySelectorAll('section')
 
 
-document.querySelector('#activate-all').addEventListener("click", () => toggleClass(sect))
+const toggleClasses = (section) => {
+    console.log("hi")
+    for(let i = 0; i< section.length; i ++) {
+        console.log(section.item(i).classList)
+        
+        // 1. Remove the `disabled` class
+        section.item(i).classList.toggle("disabled")
+        // 2. Add the `enabled` class
+        section.item(i).classList.add("enabled")
+        // sectionQuery.classList.add("enabled")
+        console.log("after", section.classList)
+        
+    }
+}
+
+document.querySelector('#activate-all').addEventListener("click", () => toggleClasses(sect))
+
+const deactivateClasses = (section) => {
+    console.log("hi")
+    for(let i = 0; i< section.length; i ++) {
+        console.log(section.item(i).classList)
+        
+        // 1. Remove the `disabled` class
+        section.item(i).classList.toggle("enabled")
+        // 2. Add the `enabled` class
+        section.item(i).classList.add("disabled")
+        // sectionQuery.classList.add("enabled")
+        console.log("after", section.classList)
+        
+    }
+}
+
+document.querySelector('#deactivate-all').addEventListener("click", () => deactivateClasses(sect))
